@@ -85,7 +85,7 @@ extract_component=function(comp,m){
 
 #returns matrix of nsamp samples from posterior
 #computed using posterior_dist
-#
+# NOTE THIS IS UNTESTED, AND PROBABLY NOT WORKING YET...
 posterior_sample = function(post,nsamp){
   component = as.vector(apply(post$pi1,2,sample_component,nsamp=nsamp))
   k = ncol(post$pi1)
